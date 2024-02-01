@@ -15,11 +15,12 @@ public class Landing_Page_Tests extends BaseTest {
     public void beforeMethod(Method method) {
         startTest(method.getName(), "Tabii Landing Page Tests");
         landing_page_objects.open_landing_page(properties.getProperty("liveURL"));
-        }
+    }
 
     @Test(retryAnalyzer = utilities.listeners.Retry.class)
     public void TC001_Open_Landing_Page() {
         landing_page_objects
                 .assert_landing_page_is_open();
     }
+
 }

@@ -6,6 +6,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.*;
 import pageObjects.Landing_Page_Objects;
+import pageObjects.Login_Page_Objects;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -15,6 +16,7 @@ public class BaseTest {
     public WebDriver driver;
 
     public Landing_Page_Objects landing_page_objects;
+    public Login_Page_Objects login_page_objects;
     public Properties properties;
     FileInputStream fileInputStream;
 
@@ -46,6 +48,7 @@ public class BaseTest {
         getReadPropFile();
 
         landing_page_objects = new Landing_Page_Objects(driver);
+        login_page_objects = new Login_Page_Objects(driver);
     }
 
     public void getReadPropFile() throws IOException {
