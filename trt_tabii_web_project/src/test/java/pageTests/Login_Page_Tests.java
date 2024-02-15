@@ -19,6 +19,6 @@ public class Login_Page_Tests extends BaseTest {
     public void TC001_Open_Login_Page() {
         login_page_objects
                 .assert_login_page_is_open();
-    }
+    }//
 
 }
